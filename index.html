@@ -25,9 +25,42 @@
             <li> <a href="about-company.html"> О Компании</a></li>
           </ul>
           <ul class="user-navigation">
-            <li class = "search-link"> <img src = "search-pic.svg"> </li>
-            <li class="login-link"> <img src = "login.svg"> Вход</li>
-            <li class = "cart-link"> <img src = "cart.svg"> Пусто </li>
+            <li class = "search-link"> <img src = "search-pic.svg">
+              <section class="search_form_wrapper">
+                <h2 class="visually-hidden">Форма поиска</h2>
+                <form class="search" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label for="search_user"> Поиск </label>
+                      <input class="search_field" id="search_user" type="text" name="search" placeholder="Что ищем?">
+                    </label>
+                  </p>
+                </form>
+              </section>
+            </li>
+            <li class="login-link"> <img src = "login.svg"> Вход
+              <section class="login_form_wrapper">
+                <h2 class="visually-hidden">Форма входа</h2>
+                <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="login_user"> Логин </label>
+                    <input class="login_field" id="login_user" type="text" name="login" placeholder="Логин">
+                  </p>
+
+                  <p>
+                    <label class="visually-hidden" for="password_user"> Пароль </label>
+                    <input class="password_field" id="password_user" type="password" name="password" placeholder="Пароль">
+                  </p>
+
+                <p class="login-password-info">
+                  <a class="restore" href="#">Забыли пароль?</a>
+                  <a class="restore" href="#">Новая регистрация</a>
+                </p>
+                 <button class="button" type="submit">Войти</button>
+                </form>
+
+              </section>
+            </li>
+            <li class = "cart-link"> <img src = "cart.svg"> Пусто  </li>
           </ul>
         </nav>
           <div class ="header-contacts"> с 10 до 12, ежедневно <br> <span class ="header-contacts--phone">8 812 450-25-25</span> </div>
@@ -155,7 +188,7 @@
 
       <section class="login_form_wrapper">
         <h2 class="visually-hidden">Форма входа</h2>
-        <form class="login_form" action="#" method="post">
+        <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label class="visually-hidden" for="login_user"> Логин </label>
             <input class="login_field" id="login_user" type="text" name="login" placeholder="Логин">
@@ -166,13 +199,8 @@
             <input class="password_field" id="password_user" type="password" name="password" placeholder="Пароль">
           </p>
 
-          <p class="login-password-info">
-          <label class="login-checkbox">
-            <input type="checkbox" name="remember" class="visually-hidden">
-            <span class="checkbox-indicator"></span>
-            Запомните меня
-          </label>
-          <a class="restore" href="#">Я забыл пароль!</a>
+        <p class="login-password-info">
+          <a class="restore" href="#">Забыли пароль?</a>
           <a class="restore" href="#">Новая регистрация</a>
         </p>
          <button class="button" type="submit">Войти</button>
@@ -180,31 +208,22 @@
 
       </section>
 
-      <section class="search_form_wrapper">
-        <h2 class="visually-hidden">Форма поиска</h2>
-        <form class="search" action="#" method="post">
-          <p>
-            <label for="search_user"> Поиск </label>
-              <input class="search_field" id="search_user" type="text" name="search" placeholder="Что ищем?">
-            </label>
-          </p>
-        </form>
-      </section>
+
 
       <section class="feedback_form_wrapper">
         <p> Мы обязательно вам ответим! </p>
-        <form class="feedback_form" action="#" method="post">
+        <form class="feedback_form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label class="visually_hidden" for="name_user">Имя</label>
             <input class="name_field" id="name_user" type="text" name="name" placeholder="Как вас зовут?">
           </p>
           <p>
             <label class="visually_hidden" for="email_user">Email</label>
-            <input class="email_field" id="email_user" type="text" name="email" placeholder="Ваша почта для ответа">
+            <input class="email_field" id="email_user" type="email" name="email" placeholder="Ваша почта для ответа?">
           </p>
           <p>
             <label class="visually_hidden" for="question_user">Введите ваш вопрос</label>
-            <textarea class="question_field" id="question_user" name="question" placeholder="Введите что нибудь" rows="8" cols="80"></textarea>
+            <textarea class="question_field" id="question_user" name="question" placeholder="Напишите что нибудь..."></textarea>
           </p>
         </form>
       </section>
