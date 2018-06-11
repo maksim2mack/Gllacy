@@ -26,9 +26,7 @@
           </ul>
           <ul class="user-navigation">
             <li class = "search-link"> <img src = "search-pic.svg"> </li>
-            <!-- тут тоже что то будет -->
             <li class="login-link"> <img src = "login.svg"> Вход</li>
-            <!-- тут вроде как должна быть форма -->
             <li class = "cart-link"> <img src = "cart.svg"> Пусто </li>
           </ul>
         </nav>
@@ -123,10 +121,10 @@
           <!-- Карта  -->
         </iframe>
 
-        <section class = "feedback">
+        <section class = "feedback-wrapper">
           <p class = "adress-title">Адрес главного офиса и офлайн магазина: <span class = "contacts-adress"> ул. Большая Конюшенная 19/8, Санкт - Петербург </span> </p>
           <p class = "contacts-title"> Для заказов по телефону: <span class ="contacts-tel"> 8 812 450-25-25 </span> (с 10 до 12 ежеднеано) </p>
-          <button> Форма обратной связи </button>
+          <button class ="button"> Форма обратной связи </button>
         </section>
       </div>
       </main>
@@ -155,10 +153,60 @@
         </div>
       </footer>
 
-      <section>
+      <section class="login_form_wrapper">
+        <h2 class="visually-hidden">Форма входа</h2>
+        <form class="login_form" action="#" method="post">
+          <p>
+            <label class="visually-hidden" for="login_user"> Логин </label>
+            <input class="login_field" id="login_user" type="text" name="login" placeholder="Логин">
+          </p>
+
+          <p>
+            <label class="visually-hidden" for="password_user"> Пароль </label>
+            <input class="password_field" id="password_user" type="password" name="password" placeholder="Пароль">
+          </p>
+
+          <p class="login-password-info">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+          <a class="restore" href="#">Новая регистрация</a>
+        </p>
+         <button class="button" type="submit">Войти</button>
+        </form>
+
+      </section>
+
+      <section class="search_form_wrapper">
+        <h2 class="visually-hidden">Форма поиска</h2>
+        <form class="search" action="#" method="post">
+          <p>
+            <label for="search_user"> Поиск </label>
+              <input class="search_field" id="search_user" type="text" name="search" placeholder="Что ищем?">
+            </label>
+          </p>
+        </form>
+      </section>
+
+      <section class="feedback_form_wrapper">
         <p> Мы обязательно вам ответим! </p>
-        <span class="modal-close">x</span>
-        <!-- Форма -->
+        <form class="feedback_form" action="#" method="post">
+          <p>
+            <label class="visually_hidden" for="name_user">Имя</label>
+            <input class="name_field" id="name_user" type="text" name="name" placeholder="Как вас зовут?">
+          </p>
+          <p>
+            <label class="visually_hidden" for="email_user">Email</label>
+            <input class="email_field" id="email_user" type="text" name="email" placeholder="Ваша почта для ответа">
+          </p>
+          <p>
+            <label class="visually_hidden" for="question_user">Введите ваш вопрос</label>
+            <textarea class="question_field" id="question_user" name="question" placeholder="Введите что нибудь" rows="8" cols="80"></textarea>
+          </p>
+        </form>
       </section>
     </body>
 </html>

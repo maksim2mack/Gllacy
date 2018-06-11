@@ -7,12 +7,12 @@
   <body>
     <header class = "main-header">
       <nav class = "main-navigation">
-        <a class = "main-header-logo">
+        <a href="index.html" class = "main-header-logo">
           <img src ="img/index-logo.svg" alt="Логотоип Gllacy">
         </a>
         <ul class ="site-navigation">
           <li class="catalog">
-            <a href="catalog.html">Каталог</a>
+            <a>Каталог</a>
             <ul>
               <li class="catalog-item"> <a href= "#"> Новинки </a> </li>
               <li class="catalog-item"> <a href= "#"> Сливочное </a> </li>
@@ -26,14 +26,14 @@
         </ul>
         <ul class="user-navigation">
           <li class = "search-link"> <img src = "search-pic.svg"> </li>
-          <!-- тут тоже что то будет -->
+
           <li class="login-link"> <img src = "login.svg"> Вход</li>
-          <!-- тут вроде как должна быть форма -->
-          <li class = "cart-link"> <img src = "cart.svg"> Пусто </li>
-          <!-- АААААААААА  -->
+
+          <li class = "cart-link"> <img src = "cart.svg"> 2 товара </li>
+
         </ul>
       </nav>
-        <div class ="header-contacts"> с 10 до 12, ежедневно <br> <span class ="header-contacts--phone">8 812 450-25-25</span> </div>
+        <div class ="header-contacts"> с 10 до 12, ежедневно <span class ="header-contacts--phone">8 812 450-25-25</span> </div>
     </header>
     <main class ="container">
 
@@ -42,7 +42,41 @@
       </nav>
         <h1> Сливочное мороженное </h1>
       <div class = "filter-wrapper">
-        <!-- ФИЛЬТРЫ  -->
+        <form class="filter_form" action="#" method="post">
+
+          <p class="filter_item">
+            <label for="filter_sorting_user">Сортировка:</label>
+            <select id="filter_sorting_user" class="filter_sorting" name="" form="">
+              <option value=""> По популярности </option>
+              <option value=""> По названию </option>
+            </select>
+          </p>
+
+          <p class="filter_item">
+            <div class="">
+              <!-- range  -->
+            </div>
+          </p>
+
+          <p class="filter_item">
+            <label> <span class="filter_name">Жирность:</span>
+            <input type="radio" name="filter_radio" value="0" id="filter_radio_user1" checked> <label for="filter_radio_user1">0%</label>
+            <input type="radio" name="filter_radio" value="10" id="filter_radio_user2"> <label for="filter_radio_user2">до 10%</label>
+            <input type="radio" name="filter_radio" value="pre30" id="filter_radio_user3"> <label for="filter_radio_user3">до 30%</label>
+            <input type="radio" name="filter_radio" value="aft30" id="filter_radio_user4"> <label for="filter_radio_user4">больше 30%</label>
+            </label>
+          </p>
+
+          <p>
+            <label> <span class="filter_name">Наполнители </span>
+            <input type="checkbox" name="filter_checkbox" value="" id="filter_checkbox_user1" checked> <label for="filter_checkbox_user1"> Шоколадные </label>
+            <input type="checkbox" name="filter_checkbox" value="" id="filter_checkbox_user2" checked> <label for="filter_checkbox_user2"> Сахарные присыпки </label>
+            <input type="checkbox" name="filter_checkbox" value="" id="filter_checkbox_user3"> <label for="filter_checkbox_user3"> Фрукты </label>
+            <input type="checkbox" name="filter_checkbox" value="" id="filter_checkbox_user4"> <label for="filter_checkbox_user4"> Сиропы </label>
+            <input type="checkbox" name="filter_checkbox" value="" id="filter_checkbox_user5"> <label for="filter_checkbox_user5"> Джемы </label>
+            </label>
+          </p>
+        </form>
       </div>
 
       <div class = "products-wrapper">
@@ -119,7 +153,7 @@
         </section>
       </div>
 
-      <div class = "page">
+      <div class = "page_wrapper">
         <a href = "#" class = "page-prev page-arrow"> < </a>
         <a href = "#" class = "page-button"> 1 </a>
         <a href = "#" class = "page-button"> 2 </a>
@@ -152,5 +186,71 @@
         <p> Сделано в <a href="https://htmlacademy.ru"> HTML Academy</a> 2018 </p>
       </div>
     </footer>
+
+    <section class="login_form_wrapper">
+      <h2 class="visually-hidden">Форма входа</h2>
+      <form class="login_form" action="#" method="post">
+        <p>
+          <label class="visually-hidden" for="login_user"> Логин </label>
+          <input class="login_field" id="login_user" type="text" name="login" placeholder="Логин">
+        </p>
+
+        <p>
+          <label class="visually-hidden" for="password_user"> Пароль </label>
+          <input class="password_field" id="password_user" type="password" name="password" placeholder="Пароль">
+        </p>
+
+        <p class="login-password-info">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember" class="visually-hidden">
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+        <a class="restore" href="#">Новая регистрация</a>
+      </p>
+       <button class="button" type="submit">Войти</button>
+      </form>
+
+    </section>
+
+    <section class="search_form_wrapper">
+      <h2 class="visually-hidden">Форма поиска</h2>
+      <form class="search" action="#" method="post">
+        <p>
+          <label for="search_user"> Поиск </label>
+            <input class="search_field" id="search_user" type="text" name="search" placeholder="Что ищем?">
+          </label>
+        </p>
+      </form>
+    </section>
+
+    <div class="cart_wrapper">
+      <div class="cart_item_wrapper">
+      <section class="cart-item">
+        <button class="close_button" type="button" name="close">x</button>
+        <div class="cart_img_icecream1"></div>
+          <p class="cart_item_desc">
+            <span class="cart_item_name">Пломбир с апельсиновым джемом</span>
+            <span class="cart_item_price">1,5 кг x <span class="price_color">200 руб.</span> </span>
+            <span class="cart_item_price">300 руб.</span>
+          </p>
+      </section>
+
+      <section class="cart-item">
+        <button class="close_button" type="button" name="close">x</button>
+        <div class="cart_img_icecream2"></div>
+          <p class="cart_item_desc">
+            <span class="cart_item_name">Клубничный пломбир с присыпкой из белого шоколада</span>
+            <span class="cart_item_price">1,5 кг x <span class="price_color">300 руб.</span> </span>
+            <span class="cart_item_price">450 руб.</span>
+          </p>
+      </section>
+      </div>
+
+      <span class="cart_total">Итого: 750руб.</span>
+
+      <a class="button" href="#">Оформить заказ!</a>
+    </div>
   </body>
 </html>
