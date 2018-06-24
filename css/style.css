@@ -40,9 +40,14 @@ a {
 }
 
 .main_navigation {
-  font-size: 16px;
   line-height: 18px;
   color: #fff
+}
+
+.site-navigation > ul{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
 }
 
 .site_navigation,
@@ -55,6 +60,7 @@ a {
 .user_navigation a,
 .catalog_list a {
   color: #ffffff;
+  padding: 10px;
 }
 
 .site_navigation a:hover,
@@ -64,9 +70,7 @@ a {
   background-color: #fff;
   color: #000;
 }
-.catalog_list {
-  visibility: hidden;
-}
+
 .visually_hidden {
   visibility: hidden;
 }
@@ -84,6 +88,8 @@ a {
 .button{
   background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  padding: 20px;
+  border-radius: 50px;
   width: 280px;
   height: 64px;
 }
@@ -160,7 +166,9 @@ a {
   list-style: none;
   color: #000;
 }
-
+.service-info--suppliers{
+  font-weight:bold;
+}
 .service_info a{
   color: #000;
 }
